@@ -1,7 +1,6 @@
 import React from 'react'
 import "./index.pcss"
 import {Link} from "react-router-dom"
-import "./ngaji"
 
 function Menu(){
 	interface Menunya {
@@ -12,6 +11,8 @@ function Menu(){
 	const menunya: Array<Menunya> = [
 		{judul: "Ngaji", link: "ngaji"}
 	]
+
+	import('./ngaji')
 
 	return <>{menunya.map(x => <Link to={`/${x.link}`}>{x.judul}</Link>)}</>
 }
